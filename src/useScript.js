@@ -14,7 +14,7 @@ export default function useScript(src) {
 
   useEffect(() => {
     if (!state.loaded && !state.failed && !state.inProgress && !state.script) {
-      const scriptExists = document.querySelector(`script[src="${src}]"`);
+      const scriptExists = document.querySelector(`script[src='${src}']`);
       if (!scriptExists) {
         setState({ inProgress: true });
         const script = document.createElement("script");
